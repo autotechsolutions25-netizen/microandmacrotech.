@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Micro & Macro Technology Pvt. Ltd. | Industrial Automation & Safety</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
+        
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #020617; scroll-behavior: smooth; overflow-x: hidden; }
+        
+        /* Advanced Glassmorphism */
+        .glass {
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* AI Animated Background */
+        .hero-gradient {
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #020617 100%);
+            position: relative;
+        }
+
+        /* Moving Glow effect */
+        .ai-glow {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.2) 0%, transparent 70%);
+            border-radius: 50%;
+            filter: blur(50px);
+            animation: move 20s infinite alternate;
+            z-index: 0;
+        }
+
+        @keyframes move {
+            from { transform: translate(-10%, -10%); }
+            to { transform: translate(100%, 50%); }
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #60a5fa, #c084fc, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 200% auto;
+            animation: shine 3s linear infinite;
+        }
+
+        @keyframes shine { to { background-position: 200% center; } }
+
+        /* Slideshow Fix for Mobile */
+        .slide { display: none; animation: slideFade 1s ease-in-out; }
+        @keyframes slideFade { from { opacity: 0; transform: scale(1.05); } to { opacity: 1; transform: scale(1); } }
+
+        /* Reliable Dropdown */
+        .dropdown { position: relative; }
+        .dropdown-menu { display: none; position: absolute; left: 0; top: 100%; min-width: 240px; z-index: 100; padding-top: 15px; }
+        .dropdown:hover .dropdown-menu { display: block; }
+        .dropdown-content { background: #0f172a; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; padding: 12px; box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
+    </style>
+</head>
+<body class="text-white">
+
+    <div class="ai-glow"></div>
+
+    <nav class="fixed w-full z-50 glass py-4 px-4 md:px-0">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="p-2 bg-blue-600 rounded-lg shadow-lg shadow-blue-500/20">
+                    <i class="fas fa-microchip text-xl"></i>
+                </div>
+                <div class="leading-none">
+                    <span class="text-blue-400 block text-[10px] uppercase tracking-[3px] font-bold">Micro and Macro</span>
+                    <span class="text-white text-lg font-extrabold tracking-tighter">TECHNOLOGY</span>
+                </div>
+            </div>
+            
+            <div class="hidden lg:flex space-x-8 items-center font-semibold text-sm">
+                <a href="#home" class="text-blue-500">HOME</a>
+                <div class="dropdown">
+                    <a href="#" class="hover:text-blue-400 transition flex items-center">COMPANY <i class="fas fa-chevron-down ml-2 text-[10px]"></i></a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-content">
+                            <a href="#" class="block px-4 py-3 hover:bg-white/5 rounded-lg transition">About Us</a>
+                            <a href="#" class="block px-4 py-3 hover:bg-white/5 rounded-lg transition">Vision & Mission</a>
+                            <a href="#" class="block px-4 py-3 hover:bg-white/5 rounded-lg transition">Certifications</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="#" class="hover:text-blue-400 transition flex items-center">SOLUTIONS <i class="fas fa-chevron-down ml-2 text-[10px]"></i></a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-content">
+                            <a href="#" class="block px-4 py-3 hover:bg-white/5 rounded-lg transition">Industrial Automation</a>
+                            <a href="#" class="block px-4 py-3 hover:bg-white/5 rounded-lg transition">Safety Systems</a>
+                        </div>
+                    </div>
+                </div>
+				
+				<a href="#" class="hover:text-blue-400 transition flex items-center">CARRERS </a>
+				<a href="#" class="hover:text-blue-400 transition flex items-center">PRODUCTS </a>
+
+                <a href="#contact" class="bg-blue-600 px-6 py-2.5 rounded-full hover:bg-blue-700 transition shadow-lg shadow-blue-600/20">Get Quote</a>
+            </div>
+
+            <div class="lg:hidden">
+                <i class="fas fa-bars text-2xl"></i>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero-gradient min-h-screen flex items-center pt-24 overflow-hidden">
+        <div class="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center relative z-10">
+            <div class="text-center lg:text-left">
+                <div class="inline-block px-4 py-1.5 mb-6 border border-blue-500/30 rounded-full glass text-blue-400 text-xs font-bold tracking-widest uppercase">
+                    Industry 4.0 Leader
+                </div>
+                <h1 class="text-5xl md:text-7xl font-extrabold leading-[1.1] mb-6">
+                    Powering <span class="gradient-text">Industrial</span> <br>Intelligence.
+                </h1>
+                <p class="text-slate-400 text-lg md:text-xl max-w-xl mx-auto lg:mx-0 mb-10 leading-relaxed">
+                    Registered vendors for IOCL, BPCL, and HPCL. We deliver AI-driven automation & high-precision safety systems.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+                    <button class="bg-blue-600 px-10 py-4 rounded-2xl font-bold hover:scale-105 transition-all shadow-xl shadow-blue-600/30">Explore Products</button>
+                    <button class="glass px-10 py-4 rounded-2xl font-bold hover:bg-white/10 transition-all border border-white/10">View Projects</button>
+                </div>
+            </div>
+
+            <div class="relative px-2">
+                <div class="w-full aspect-video md:h-[450px] glass rounded-[2.5rem] overflow-hidden shadow-2xl relative border border-white/20">
+                    <div class="slide h-full relative">
+                        <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1200&q=80" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#020617] via-transparent to-transparent"></div>
+                        <div class="absolute bottom-10 left-10">
+                            <h3 class="text-3xl font-bold text-blue-400">Smart Automation</h3>
+                            <p class="text-slate-300">DCS & PLC for Refineries</p>
+                        </div>
+                    </div>
+                    <div class="slide h-full relative">
+                        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#020617] via-transparent to-transparent"></div>
+                        <div class="absolute bottom-10 left-10">
+                            <h3 class="text-3xl font-bold text-red-400">Safety First</h3>
+                            <p class="text-slate-300">Gas & Fire Detection</p>
+                        </div>
+                    </div>
+                    
+                    <div class="absolute bottom-6 right-10 flex space-x-3">
+                        <span class="dot h-1.5 w-8 bg-white/20 rounded-full cursor-pointer transition-all"></span>
+                        <span class="dot h-1.5 w-8 bg-white/20 rounded-full cursor-pointer transition-all"></span>
+                    </div>
+                </div>
+                
+                <div class="absolute -bottom-8 -left-2 md:-left-10 glass p-8 rounded-3xl shadow-2xl border-l-4 border-blue-500 animate-bounce-slow">
+                    <p class="text-4xl font-black text-blue-500">15+</p>
+                    <p class="text-[10px] uppercase font-bold tracking-widest text-slate-400">Years of Engineering</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="solutions" class="py-24 bg-[#020617]">
+        <div class="container mx-auto px-6 grid md:grid-cols-3 gap-8">
+            <div class="group p-10 glass rounded-[2rem] hover:bg-blue-600/10 transition-all border-white/5 hover:border-blue-500/50">
+                <div class="w-14 h-14 bg-blue-600/20 rounded-xl flex items-center justify-center mb-8 group-hover:scale-110 transition">
+                    <i class="fas fa-robot text-2xl text-blue-500"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-4">Process Automation</h3>
+                <p class="text-slate-400 leading-relaxed">Advanced DCS & PLC implementation for high-scale oil refineries.</p>
+            </div>
+            <div class="group p-10 glass rounded-[2rem] hover:bg-red-600/10 transition-all border-white/5 hover:border-red-500/50">
+                <div class="w-14 h-14 bg-red-600/20 rounded-xl flex items-center justify-center mb-8 group-hover:scale-110 transition">
+                    <i class="fas fa-shield-alt text-2xl text-red-500"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-4">Safety Systems</h3>
+                <p class="text-slate-400 leading-relaxed">Certified explosive gas detectors and fire suppression technology.</p>
+            </div>
+            <div class="group p-10 glass rounded-[2rem] hover:bg-green-600/10 transition-all border-white/5 hover:border-green-500/50">
+                <div class="w-14 h-14 bg-green-600/20 rounded-xl flex items-center justify-center mb-8 group-hover:scale-110 transition">
+                    <i class="fas fa-project-diagram text-2xl text-green-500"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-4">Turnkey Execution</h3>
+                <p class="text-slate-400 leading-relaxed">From design to commissioning for Fortune 500 oil industries.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="py-20 bg-black border-t border-white/5">
+        <div class="container mx-auto px-6 grid lg:grid-cols-2 gap-12">
+            <div>
+                <h2 class="text-3xl font-bold mb-6">Micro & Macro Technology Pvt. Ltd.</h2>
+                <p class="text-slate-500 mb-8 max-w-md">Engineering the future of industrial safety since 2011. Partnering with India's energy giants.</p>
+                <div class="space-y-4">
+                    <p class="flex items-center text-slate-300"><i class="fas fa-map-marker-alt w-10 text-blue-500"></i> Corporate Office, Raxual, Distt- East Champaran, Bihar, Pin- 845305</p>
+                    <p class="flex items-center text-slate-300"><i class="fas fa-phone w-10 text-blue-500"></i> +91 62027 67912</p>
+					<p class="flex items-center text-slate-300"><i class="fas fa-envelope w-10 text-blue-500"></i> Email</p>
+
+                </div>
+            </div>
+            <div class="glass p-8 rounded-3xl border-white/10">
+                <h4 class="text-xl font-bold mb-6">Subscribe to Updates</h4>
+                <div class="flex gap-2">
+                    <input type="email" placeholder="Enter email" class="bg-white/5 border border-white/10 rounded-xl px-4 py-3 flex-1 outline-none focus:border-blue-500">
+                    <button class="bg-blue-600 px-6 py-3 rounded-xl font-bold">Join</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+        function showSlides() {
+            let slides = document.getElementsByClassName("slide");
+            let dots = document.getElementsByClassName("dot");
+            for (let i = 0; i < slides.length; i++) { slides[i].style.display = "none"; }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            for (let i = 0; i < dots.length; i++) { 
+                dots[i].style.width = "2rem";
+                dots[i].style.backgroundColor = "rgba(255,255,255,0.2)"; 
+            }
+            if(slides[slideIndex-1]) slides[slideIndex-1].style.display = "block";  
+            if(dots[slideIndex-1]) {
+                dots[slideIndex-1].style.width = "4rem";
+                dots[slideIndex-1].style.backgroundColor = "#3b82f6";
+            }
+            setTimeout(showSlides, 5000); 
+        }
+    </script>
+</body>
+</html>
