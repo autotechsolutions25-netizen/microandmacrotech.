@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Micro & Macro Technology Pvt. Ltd. | Industrial Automation & Safety</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
+        
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #020617; scroll-behavior: smooth; overflow-x: hidden; }
+        
+        .glass { background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .hero-gradient { background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #020617 100%); position: relative; }
+
+        .ai-glow {
+            position: absolute; width: 400px; height: 400px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
+            border-radius: 50%; filter: blur(50px); animation: move 20s infinite alternate; z-index: 0;
+        }
+        @keyframes move { from { transform: translate(-10%, -10%); } to { transform: translate(100%, 50%); } }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #60a5fa, #c084fc, #3b82f6);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            background-size: 200% auto; animation: shine 3s linear infinite;
+        }
+        @keyframes shine { to { background-position: 200% center; } }
+
+        .slide { display: none; animation: slideFade 1s ease-in-out; }
+        @keyframes slideFade { from { opacity: 0; transform: scale(1.02); } to { opacity: 1; transform: scale(1); } }
+
+        /* Desktop Dropdown Fix */
+        .dropdown { position: relative; }
+        .dropdown-menu { display: none; position: absolute; left: 0; top: 100%; min-width: 220px; z-index: 100; padding-top: 15px; }
+        .dropdown:hover .dropdown-menu { display: block; }
+        .dropdown-content { background: #0f172a; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 10px; box-shadow: 0 15px 30px rgba(0,0,0,0.5); }
+
+        /* Mobile Menu Fix */
+        #mobile-menu { transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1); transform: translateX(100%); }
+        #mobile-menu.active { transform: translateX(0); }
+    </style>
+</head>
+<body class="text-white">
+
+    <div class="ai-glow"></div>
+
+    <nav class="fixed w-full z-[60] glass py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="p-2 bg-blue-600 rounded-lg shadow-lg shadow-blue-500/20">
+                    <i class="fas fa-microchip text-xl text-white"></i>
+                </div>
+                <div class="leading-none text-left">
+                    <span class="text-blue-400 block text-[10px] uppercase tracking-[3px] font-bold">Micro and Macro</span>
+                    <span class="text-white text-lg font-extrabold tracking-tighter">TECHNOLOGY</span>
+                </div>
+            </div>
+            
+            <div class="hidden lg:flex space-x-8 items-center font-semibold text-sm">
+                <a href="./index.html" class="text-blue-500">HOME</a>
+                <div class="dropdown">
+                    <a href="./about.html" class="hover:text-blue-400 transition flex items-center">COMPANY <i class="fas fa-chevron-down ml-2 text-[10px]"></i></a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-content">
+                            <a href="./about.html" class="block px-4 py-2 hover:bg-white/5 rounded transition text-white">About Us</a>
+                            <a href="./vision.html" class="block px-4 py-2 hover:bg-white/5 rounded transition text-white">Vision & Mission</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="#" class="hover:text-blue-400 transition flex items-center">SOLUTIONS <i class="fas fa-chevron-down ml-2 text-[10px]"></i></a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-content">
+                            <a href="./automation.html" class="block px-4 py-2 hover:bg-white/5 rounded transition text-white">Industrial Automation</a>
+                            <a href="./safety.html" class="block px-4 py-2 hover:bg-white/5 rounded transition text-white">Safety Systems</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="./carrers.html" class="hover:text-blue-400 transition">CARRERS</a>
+                <a href="./product.html" class="hover:text-blue-400 transition">PRODUCTS</a>
+                <a href="./quote.html" class="bg-blue-600 px-6 py-2.5 rounded-full hover:bg-blue-700 transition shadow-lg shadow-blue-600/20">Get Quote</a>
+            </div>
+
+            <button id="menu-btn" class="lg:hidden text-white focus:outline-none z-[70]">
+                <i class="fas fa-bars text-2xl" id="menu-icon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <div id="mobile-menu" class="fixed inset-0 bg-[#020617] z-[65] flex flex-col p-10 space-y-6 lg:hidden">
+        <div class="pt-10 flex flex-col space-y-6 text-xl font-bold">
+            <a href="./index.html" class="mobile-link text-blue-500">HOME</a>
+            <a href="./about.html" class="mobile-link">ABOUT US</a>
+            <a href="./automation.html" class="mobile-link">AUTOMATION</a>
+            <a href="./safety.html" class="mobile-link">SAFETY SYSTEMS</a>
+            <a href="./careers.html" class="mobile-link">CAREERS</a>
+            <a href="./product.html" class="mobile-link">PRODUCTS</a>
+            <hr class="border-white/10">
+            <a href="./quote.html" class="bg-blue-600 text-center py-4 rounded-xl text-white font-bold">GET QUOTE</a>
+        </div>
+    </div>
+
+    <section id="home" class="hero-gradient min-h-screen flex items-center pt-24 pb-12 lg:pt-32 lg:pb-10">
+        <div class="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center relative z-10 text-center lg:text-left">
+            <div class="order-1">
+                <div class="inline-block px-4 py-1.5 mb-6 border border-blue-500/30 rounded-full glass text-blue-400 text-xs font-bold tracking-widest uppercase">
+                    Industry 4.0 Leader
+                </div>
+                <h1 class="text-4xl md:text-7xl font-extrabold leading-[1.1] mb-6">
+                    Powering <span class="gradient-text">Industrial</span> Intelligence.
+                </h1>
+                <p class="text-slate-400 text-lg md:text-xl max-w-xl mx-auto lg:mx-0 mb-10 leading-relaxed">
+                    Registered vendors for IOCL, BPCL, and HPCL. We deliver AI-driven automation & high-precision safety systems.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <a href="./product.html" class="bg-blue-600 px-10 py-4 rounded-2xl font-bold hover:scale-105 transition-all shadow-xl shadow-blue-600/30 text-center">Explore Products</a>
+                    <a href="./quote.html" class="glass px-10 py-4 rounded-2xl font-bold hover:bg-white/10 transition-all border border-white/10 text-center">Get Quote</a>
+                </div>
+            </div>
+
+            <div class="relative w-full overflow-hidden order-2">
+                <div class="w-full aspect-[4/3] md:h-[450px] glass rounded-[2rem] overflow-hidden shadow-2xl relative border border-white/10">
+                    <div class="slide h-full relative">
+                        <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1200&q=80" class="w-full h-full object-cover opacity-60">
+                        <div class="absolute bottom-6 left-6 md:bottom-10 md:left-10 text-left">
+                            <h3 class="text-xl md:text-3xl font-bold text-blue-400">Smart Automation</h3>
+                            <p class="text-sm text-slate-300">DCS & PLC for Refineries</p>
+                        </div>
+                    </div>
+                    <div class="slide h-full relative">
+                        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80" class="w-full h-full object-cover opacity-60">
+                        <div class="absolute bottom-6 left-6 md:bottom-10 md:left-10 text-left">
+                            <h3 class="text-xl md:text-3xl font-bold text-red-400">Safety First</h3>
+                            <p class="text-sm text-slate-300">Gas & Fire Detection</p>
+                        </div>
+                    </div>
+                    <div class="absolute bottom-4 right-6 flex space-x-3">
+                        <span class="dot h-1.5 w-8 bg-white/20 rounded-full transition-all"></span>
+                        <span class="dot h-1.5 w-8 bg-white/20 rounded-full transition-all"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="solutions" class="py-16 md:py-24 bg-[#020617]">
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="group p-8 glass rounded-[2rem] border-white/5 hover:border-blue-500/50 transition-all text-left">
+                <i class="fas fa-robot text-3xl text-blue-500 mb-6"></i>
+                <h3 class="text-xl font-bold mb-4">Process Automation</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">Advanced DCS & PLC implementation for high-scale oil refineries.</p>
+            </div>
+            <div class="group p-8 glass rounded-[2rem] border-white/5 hover:border-red-500/50 transition-all text-left">
+                <i class="fas fa-shield-alt text-3xl text-red-500 mb-6"></i>
+                <h3 class="text-xl font-bold mb-4">Safety Systems</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">Certified explosive gas detectors and fire suppression technology.</p>
+            </div>
+            <div class="group p-8 glass rounded-[2rem] border-white/5 hover:border-green-500/50 transition-all text-left">
+                <i class="fas fa-project-diagram text-3xl text-green-500 mb-6"></i>
+                <h3 class="text-xl font-bold mb-4">Turnkey Execution</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">From design to commissioning for Fortune 500 oil industries.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="py-16 bg-black border-t border-white/5">
+        <div class="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-10 text-left">
+            <div>
+                <h2 class="text-2xl font-bold mb-4">Micro & Macro Technology Pvt. Ltd.</h2>
+                <div class="space-y-3 text-slate-400 text-sm">
+                    <p><i class="fas fa-map-marker-alt text-blue-500 mr-2"></i> Raxaul, East Champaran, Bihar - 845305</p>
+                    <p><i class="fas fa-phone text-blue-500 mr-2"></i> +91 62027 67912</p>
+                    <p><i class="fas fa-envelope text-blue-500 mr-2"></i> info@mmtech.com</p>
+                </div>
+            </div>
+            <div class="text-slate-600 text-sm lg:text-right self-end mt-8 lg:mt-0">
+                &copy; 2026 Micro & Macro Technology Pvt. Ltd.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            menuIcon.classList.toggle('fa-bars');
+            menuIcon.classList.toggle('fa-times');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                menuIcon.classList.add('fa-bars');
+                menuIcon.classList.remove('fa-times');
+            });
+        });
+
+        let slideIndex = 0;
+        showSlides();
+        function showSlides() {
+            let slides = document.getElementsByClassName("slide");
+            let dots = document.getElementsByClassName("dot");
+            for (let i = 0; i < slides.length; i++) { slides[i].style.display = "none"; }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            for (let i = 0; i < dots.length; i++) { 
+                dots[i].style.width = "1.5rem";
+                dots[i].style.backgroundColor = "rgba(255,255,255,0.2)"; 
+            }
+            if(slides[slideIndex-1]) slides[slideIndex-1].style.display = "block";  
+            if(dots[slideIndex-1]) {
+                dots[slideIndex-1].style.width = "3rem";
+                dots[slideIndex-1].style.backgroundColor = "#3b82f6";
+            }
+            setTimeout(showSlides, 4000); 
+        }
+    </script>
+</body>
+</html>
