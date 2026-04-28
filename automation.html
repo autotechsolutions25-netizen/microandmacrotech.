@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Industrial Automation | Micro & Macro Technology Pvt. Ltd.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
+        
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #020617; color: white; overflow-x: hidden; }
+        
+        .glass { background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        
+        .hero-glow {
+            position: absolute; width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(37, 99, 235, 0.1) 0%, transparent 70%);
+            border-radius: 50%; filter: blur(80px); top: -100px; right: -100px; z-index: 0;
+        }
+
+        .tech-card:hover {
+            border-color: #3b82f6;
+            background: rgba(30, 41, 59, 0.5);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        .keyword-pill {
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            transition: all 0.3s ease;
+        }
+        .keyword-pill:hover { background: #3b82f6; color: white; }
+    </style>
+</head>
+<body>
+
+    <div class="hero-glow"></div>
+
+    <nav class="fixed w-full z-50 glass py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="p-2 bg-blue-600 rounded-lg shadow-lg shadow-blue-500/20">
+                    <i class="fas fa-microchip text-xl text-white"></i>
+                </div>
+                <div class="leading-none text-left">
+                    <span class="text-blue-400 block text-[10px] uppercase tracking-[3px] font-bold">Micro and Macro</span>
+                    <span class="text-white text-lg font-extrabold tracking-tighter">TECHNOLOGY</span>
+                </div>
+            </div>
+            <div class="hidden lg:flex space-x-8 items-center font-semibold text-sm">
+                <a href="index.html" class="hover:text-blue-400">HOME</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="pt-44 pb-20 relative">
+        <div class="container mx-auto px-6 text-center lg:text-left">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-5xl md:text-6xl font-black mb-6 leading-tight">
+                        Industrial <br><span class="text-blue-500">Automation</span> Solutions
+                    </h1>
+                    <p class="text-xl text-slate-400 leading-relaxed mb-8">
+                        Hum purane manual processes ko smart, automated systems mein badalte hain jo aapki productivity badhate hain. Real-time monitoring aur seamless integration ke saath industry 4.0 ke liye taiyaar rahein.
+                    </p>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="keyword-pill px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider text-blue-400">Efficiency</span>
+                        <span class="keyword-pill px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider text-blue-400">Accuracy</span>
+                        <span class="keyword-pill px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider text-blue-400">Productivity</span>
+                        <span class="keyword-pill px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider text-blue-400">Real-time Monitoring</span>
+                    </div>
+                </div>
+                <div class="hidden lg:block relative">
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" class="rounded-[3rem] shadow-2xl border border-white/10 opacity-80" alt="Automation">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-slate-900/30">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-black mb-12 flex items-center">
+                <span class="w-10 h-1 bg-blue-600 mr-4"></span> Core Services
+            </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="glass p-8 rounded-3xl tech-card transition-all">
+                    <i class="fas fa-terminal text-3xl text-blue-500 mb-6"></i>
+                    <h4 class="text-xl font-bold mb-4">PLC Programming</h4>
+                    <p class="text-slate-400 text-sm">Logic development for Siemens, Allen Bradley, Delta, etc. Tailored to your specific industrial needs.</p>
+                </div>
+                <div class="glass p-8 rounded-3xl tech-card transition-all">
+                    <i class="fas fa-chart-line text-3xl text-blue-500 mb-6"></i>
+                    <h4 class="text-xl font-bold mb-4">SCADA & HMI</h4>
+                    <p class="text-slate-400 text-sm">Real-time data visualization aur intuitive control interfaces for complete plant oversight.</p>
+                </div>
+                <div class="glass p-8 rounded-3xl tech-card transition-all">
+                    <i class="fas fa-bolt text-3xl text-blue-500 mb-6"></i>
+                    <h4 class="text-xl font-bold mb-4">Control Panels</h4>
+                    <p class="text-slate-400 text-sm">Advanced MCC/PCC panel assembly aur technical electrical drawings (E-Plan).</p>
+                </div>
+                <div class="glass p-8 rounded-3xl tech-card transition-all">
+                    <i class="fas fa-cog text-3xl text-blue-500 mb-6"></i>
+                    <h4 class="text-xl font-bold mb-4">VFD & Servo Drives</h4>
+                    <p class="text-slate-400 text-sm">Precision motion control aur energy-efficient motor speed integration.</p>
+                </div>
+                <div class="glass p-8 rounded-3xl tech-card transition-all">
+                    <i class="fas fa-cloud-upload-alt text-3xl text-blue-500 mb-6"></i>
+                    <h4 class="text-xl font-bold mb-4">Industrial IoT (IIoT)</h4>
+                    <p class="text-slate-400 text-sm">Machines ka data cloud par bhejna aur world-wide remote monitoring solutions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-black mb-12 text-center">Intelligent <span class="text-blue-500">Automation</span> Solutions</h2>
+            <div class="grid md:grid-cols-2 gap-10">
+                <div class="flex space-x-6 p-6 border-b border-white/5">
+                    <div class="text-4xl font-bold text-blue-900">01</div>
+                    <div>
+                        <h4 class="text-xl font-bold mb-2">Process Automation</h4>
+                        <p class="text-slate-400 text-sm leading-relaxed">Manual operations ko automatic smart systems mein convert karke human error khatam karna.</p>
+                    </div>
+                </div>
+                <div class="flex space-x-6 p-6 border-b border-white/5">
+                    <div class="text-4xl font-bold text-blue-900">02</div>
+                    <div>
+                        <h4 class="text-xl font-bold mb-2">Factory Digitization</h4>
+                        <p class="text-slate-400 text-sm leading-relaxed">Paper-work ko digital reports aur analytics mein badalna for faster decision making.</p>
+                    </div>
+                </div>
+                <div class="flex space-x-6 p-6 border-b border-white/5">
+                    <div class="text-4xl font-bold text-blue-900">03</div>
+                    <div>
+                        <h4 class="text-xl font-bold mb-2">Energy Management</h4>
+                        <p class="text-slate-400 text-sm leading-relaxed">Bijli ki bachat ke liye smart monitoring aur optimized machine cycles design karna.</p>
+                    </div>
+                </div>
+                <div class="flex space-x-6 p-6 border-b border-white/5">
+                    <div class="text-4xl font-bold text-blue-900">04</div>
+                    <div>
+                        <h4 class="text-xl font-bold mb-2">Machine Retrofitting</h4>
+                        <p class="text-slate-400 text-sm leading-relaxed">Legacy machines ko naye controllers aur cloud-connectivity ke saath upgrade karna.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-blue-600/5">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-black mb-16">Hardware & On-Field Expertise</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="space-y-4">
+                    <i class="fas fa-microchip text-4xl text-blue-500"></i>
+                    <h5 class="font-bold">Sensors & Actuators</h5>
+                    <p class="text-xs text-slate-500">Flow, Pressure & Temp Calibration</p>
+                </div>
+                <div class="space-y-4">
+                    <i class="fas fa-tools text-4xl text-blue-500"></i>
+                    <h5 class="font-bold">Instrument Calibration</h5>
+                    <p class="text-xs text-slate-500">High Precision Accuracy Checks</p>
+                </div>
+                <div class="space-y-4">
+                    <i class="fas fa-video text-4xl text-blue-500"></i>
+                    <h5 class="font-bold">CCTV & Security</h5>
+                    <p class="text-xs text-slate-500">Industrial Surveillance Systems</p>
+                </div>
+                <div class="space-y-4">
+                    <i class="fas fa-shield-virus text-4xl text-blue-500"></i>
+                    <h5 class="font-bold">Troubleshooting</h5>
+                    <p class="text-xs text-slate-500">24/7 AMC & Maintenance Support</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 bg-black border-t border-white/5">
+        <div class="container mx-auto px-6 text-center text-slate-600">
+            <p>&copy; 2026 Micro & Macro Technology Pvt. Ltd. | Seamless Automation Integration</p>
+        </div>
+    </footer>
+
+</body>
+</html>

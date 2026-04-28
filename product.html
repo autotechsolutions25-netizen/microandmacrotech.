@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products | Micro & Macro Technology Pvt. Ltd.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #020617; color: white; overflow-x: hidden; }
+        .glass { background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        
+        .product-card:hover { transform: translateY(-10px); border-color: #3b82f6; transition: all 0.4s ease; }
+        
+        /* Modal Style */
+        #quote-modal { display: none; }
+        #quote-modal.active { display: flex; }
+
+        .gradient-btn {
+            background: linear-gradient(90deg, #1e40af, #3b82f6);
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="text-left">
+
+    <nav class="fixed w-full z-50 glass py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="p-2 bg-blue-600 rounded-lg shadow-lg shadow-blue-500/20">
+                    <i class="fas fa-microchip text-xl text-white"></i>
+                </div>
+                <div class="leading-none">
+                    <span class="text-blue-400 block text-[10px] uppercase tracking-[3px] font-bold">Micro and Macro</span>
+                    <span class="text-white text-lg font-extrabold tracking-tighter">TECHNOLOGY</span>
+                </div>
+            </div>
+            <div class="hidden lg:flex space-x-8 items-center font-semibold text-sm">
+                <a href="index.html" class="hover:text-blue-400">HOME</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="pt-40 pb-16 relative z-10 text-center">
+        <div class="container mx-auto px-6">
+            <h1 class="text-5xl font-black mb-4 uppercase tracking-tighter">Premium <span class="text-blue-500">Products</span></h1>
+            <p class="text-slate-400">Advanced Industrial Equipment & Automation Hardware</p>
+        </div>
+    </section>
+
+    <section class="pb-32 relative z-10">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+                
+                <div class="glass rounded-[2.5rem] overflow-hidden product-card border border-white/5">
+                    <div class="h-64 bg-slate-800 overflow-hidden">
+                        <img src="products/plc_controller.jpg" alt="PLC Controller" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition">
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-3 text-blue-400">High-End PLC Systems</h3>
+                        <p class="text-slate-400 text-sm mb-6 leading-relaxed">
+                            Customizable logic controllers for industrial automation, supporting Siemens and Allen Bradley protocols.
+                        </p>
+                        <button onclick="openModal('High-End PLC Systems')" class="gradient-btn w-full py-4 rounded-2xl font-bold uppercase tracking-wider text-sm">Get Quote</button>
+                    </div>
+                </div>
+
+                <div class="glass rounded-[2.5rem] overflow-hidden product-card border border-white/5">
+                    <div class="h-64 bg-slate-800 overflow-hidden">
+                        <img src="products/gas_detector.jpg" alt="Gas Detector" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition">
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-3 text-blue-400">Industrial Gas Detectors</h3>
+                        <p class="text-slate-400 text-sm mb-6 leading-relaxed">
+                            SIL-2 rated detectors for hazardous fumes and combustible gases with real-time digital display.
+                        </p>
+                        <button onclick="openModal('Industrial Gas Detectors')" class="gradient-btn w-full py-4 rounded-2xl font-bold uppercase tracking-wider text-sm">Get Quote</button>
+                    </div>
+                </div>
+
+                <div class="glass rounded-[2.5rem] overflow-hidden product-card border border-white/5">
+                    <div class="h-64 bg-slate-800 overflow-hidden">
+                        <img src="products/safety_light.jpg" alt="Safety Curtain" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition">
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-3 text-blue-400">Safety Light Curtains</h3>
+                        <p class="text-slate-400 text-sm mb-6 leading-relaxed">
+                            Optical guarding systems to ensure personnel safety around high-speed machinery.
+                        </p>
+                        <button onclick="openModal('Safety Light Curtains')" class="gradient-btn w-full py-4 rounded-2xl font-bold uppercase tracking-wider text-sm">Get Quote</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div id="quote-modal" class="fixed inset-0 z-[100] glass items-center justify-center p-6 bg-black/60">
+        <div class="bg-[#0f172a] w-full max-w-lg rounded-[2.5rem] p-10 border border-white/10 relative">
+            <button onclick="closeModal()" class="absolute top-6 right-6 text-slate-500 hover:text-white"><i class="fas fa-times text-2xl"></i></button>
+            
+            <h2 class="text-3xl font-black mb-2 text-blue-500 uppercase tracking-tighter">Request Quote</h2>
+            <p id="selected-product" class="text-slate-400 mb-8 font-bold"></p>
+
+            <form action="https://formspree.io/f/microandmacrotechnology@gmail.com" method="POST" class="space-y-4">
+                <input type="hidden" name="Product_Name" id="product-name-input">
+                
+                <div>
+                    <label class="block text-xs font-bold text-slate-500 uppercase mb-2 ml-2">Your Name</label>
+                    <input type="text" name="name" required class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-blue-500 transition">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-500 uppercase mb-2 ml-2">Email Address</label>
+                    <input type="email" name="email" required class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-blue-500 transition">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-500 uppercase mb-2 ml-2">Company / Industry</label>
+                    <input type="text" name="company" class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-blue-500 transition">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-500 uppercase mb-2 ml-2">Specific Requirements</label>
+                    <textarea name="message" rows="3" class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-blue-500 transition"></textarea>
+                </div>
+                
+                <button type="submit" class="w-full gradient-btn py-5 rounded-2xl font-black uppercase tracking-widest shadow-xl shadow-blue-600/30">Submit Enquiry</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="py-12 bg-black border-t border-white/5 text-center">
+        <div class="container mx-auto px-6 text-slate-600 text-sm">
+            &copy; 2026 Micro & Macro Technology Pvt. Ltd. | Quality Engineering
+        </div>
+    </footer>
+
+    <script>
+        function openModal(productName) {
+            document.getElementById('quote-modal').classList.add('active');
+            document.getElementById('selected-product').innerText = productName;
+            document.getElementById('product-name-input').value = productName;
+        }
+
+        function closeModal() {
+            document.getElementById('quote-modal').classList.remove('active');
+        }
+
+        // Close modal on escape key
+        window.onkeydown = function(event) {
+            if (event.keyCode == 27) closeModal();
+        }
+    </script>
+
+</body>
+</html>

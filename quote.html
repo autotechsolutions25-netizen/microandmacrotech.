@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get a Quote | Micro & Macro Technology Pvt. Ltd.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
+        
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #020617; color: white; overflow-x: hidden; }
+        
+        .glass { background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        
+        .ai-glow {
+            position: absolute; width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
+            border-radius: 50%; filter: blur(80px); top: -200px; right: -100px; z-index: 0;
+        }
+
+        .input-field {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        .input-field:focus {
+            border-color: #3b82f6;
+            background: rgba(255, 255, 255, 0.07);
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.2);
+        }
+
+        .gradient-btn {
+            background: linear-gradient(90deg, #1e40af, #3b82f6);
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+        }
+    </style>
+</head>
+<body class="text-left">
+
+    <div class="ai-glow"></div>
+
+    <nav class="fixed w-full z-50 glass py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="p-2 bg-blue-600 rounded-lg shadow-lg shadow-blue-500/20">
+                    <i class="fas fa-microchip text-xl text-white"></i>
+                </div>
+                <div class="leading-none text-left">
+                    <span class="text-blue-400 block text-[10px] uppercase tracking-[3px] font-bold">Micro and Macro</span>
+                    <span class="text-white text-lg font-extrabold tracking-tighter">TECHNOLOGY</span>
+                </div>
+            </div>
+            <div class="hidden lg:flex space-x-8 items-center font-semibold text-sm">
+                <a href="index.html" class="hover:text-blue-400 transition">HOME</a>
+                <a href="about.html" class="hover:text-blue-400 transition">ABOUT</a>
+                <a href="products.html" class="hover:text-blue-400 transition">PRODUCTS</a>
+                <a href="#" class="text-blue-500 underline decoration-2 underline-offset-8">GET QUOTE</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="pt-44 pb-12 relative z-10 text-center lg:text-left">
+        <div class="container mx-auto px-6">
+            <h1 class="text-5xl md:text-6xl font-black mb-4 uppercase tracking-tighter">Request a <span class="text-blue-500">Quote</span></h1>
+            <p class="text-slate-400 max-w-2xl">Aapki requirements humare liye priority hain. Form bharein, humari expert team aapse 24 ghante ke andar sampark karegi.</p>
+        </div>
+    </section>
+
+    <section class="pb-32 relative z-10">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-3 gap-12">
+                
+                <div class="lg:col-span-1 space-y-6">
+                    <div class="glass p-8 rounded-[2rem] border-white/5">
+                        <h4 class="text-xl font-bold mb-6 text-blue-400">Direct Contact</h4>
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <i class="fas fa-phone-alt mt-1 text-blue-500"></i>
+                                <div>
+                                    <p class="text-xs text-slate-500 uppercase font-bold tracking-widest">Call Us</p>
+                                    <p class="font-bold">+91 62027 67912</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <i class="fas fa-envelope mt-1 text-blue-500"></i>
+                                <div>
+                                    <p class="text-xs text-slate-500 uppercase font-bold tracking-widest">Email Admin</p>
+                                    <p class="font-bold text-sm">microandmacrotechnology@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <i class="fas fa-map-marker-alt mt-1 text-blue-500"></i>
+                                <div>
+                                    <p class="text-xs text-slate-500 uppercase font-bold tracking-widest">Location</p>
+                                    <p class="font-bold text-sm">Raxual, East Champaran, Bihar</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass p-8 rounded-[2rem] bg-blue-600/10 border-blue-500/20">
+                        <h4 class="font-bold mb-2 uppercase text-xs tracking-widest">Quick Note</h4>
+                        <p class="text-slate-400 text-sm italic leading-relaxed">
+                            "Hum IOCL, BPCL aur HPCL jaise industries ke liye customized automation aur safety solutions provide karte hain."
+                        </p>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-2">
+                    <div class="glass p-8 md:p-12 rounded-[3rem] border-white/5 shadow-2xl">
+                        <form action="https://formspree.io/f/microandmacrotechnology@gmail.com" method="POST" class="grid md:grid-cols-2 gap-6">
+                            
+                            <div class="space-y-2">
+                                <label class="text-xs font-bold text-slate-500 uppercase ml-2">Full Name *</label>
+                                <input type="text" name="Name" required class="input-field w-full px-6 py-4 rounded-2xl outline-none" placeholder="Enter your name">
+                            </div>
+
+                            <div class="space-y-2">
+                                <label class="text-xs font-bold text-slate-500 uppercase ml-2">Email Address *</label>
+                                <input type="email" name="Email" required class="input-field w-full px-6 py-4 rounded-2xl outline-none" placeholder="email@company.com">
+                            </div>
+
+                            <div class="space-y-2">
+                                <label class="text-xs font-bold text-slate-500 uppercase ml-2">Phone Number</label>
+                                <input type="tel" name="Phone" class="input-field w-full px-6 py-4 rounded-2xl outline-none" placeholder="+91 0000000000">
+                            </div>
+
+                            <div class="space-y-2">
+                                <label class="text-xs font-bold text-slate-500 uppercase ml-2">Service Type</label>
+                                <select name="Service" class="input-field w-full px-6 py-4 rounded-2xl outline-none text-slate-400">
+                                    <option value="Industrial Automation">Industrial Automation</option>
+                                    <option value="Safety Equipment">Safety Equipment</option>
+                                    <option value="Turnkey Project">Turnkey Project</option>
+                                    <option value="Maintenance / AMC">Maintenance / AMC</option>
+                                </select>
+                            </div>
+
+                            <div class="md:col-span-2 space-y-2">
+                                <label class="text-xs font-bold text-slate-500 uppercase ml-2">Requirement Details *</label>
+                                <textarea name="Message" rows="5" required class="input-field w-full px-6 py-4 rounded-2xl outline-none" placeholder="Describe your project or equipment needs..."></textarea>
+                            </div>
+
+                            <div class="md:col-span-2 pt-4">
+                                <button type="submit" class="gradient-btn w-full md:w-auto px-12 py-5 rounded-2xl font-black uppercase tracking-widest text-white hover:scale-105 transition-all">
+                                    Send Inquiry <i class="fas fa-paper-plane ml-3"></i>
+                                </button>
+                                <p class="text-[10px] text-slate-600 mt-4 italic">* Hum aapka data kisi teesre paksh ke saath share nahi karte.</p>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 bg-black border-t border-white/5 text-center lg:text-left">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-slate-600 text-sm">
+            <p>&copy; 2026 Micro & Macro Technology Pvt. Ltd.</p>
+            <div class="flex space-x-6 mt-4 md:mt-0">
+                <a href="index.html" class="hover:text-white transition">Home</a>
+                <a href="about.html" class="hover:text-white transition">About</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
