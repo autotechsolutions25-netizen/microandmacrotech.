@@ -6,26 +6,33 @@
     <title>Our Products | Micro & Macro Technology Pvt. Ltd.</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
+        <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
+        
         body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #020617; color: white; overflow-x: hidden; }
+        
         .glass { background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
         
-        /* Product Card Hover */
-        .product-card:hover { transform: translateY(-10px); border-color: #3b82f6; transition: all 0.4s ease; }
-        
-        /* Modal Style */
-        #quote-modal { display: none; }
-        #quote-modal.active { display: flex; }
-
-        .gradient-btn {
-            background: linear-gradient(90deg, #1e40af, #3b82f6);
-            transition: all 0.3s ease;
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
         }
+        .logo-track {
+            display: flex;
+            width: calc(250px * 10);
+            animation: scroll 20s linear infinite;
+        }
+        .logo-item { width: 250px; flex-shrink: 0; display: flex; items-center: center; justify-content: center; }
 
-        /* Mobile Menu Animation Fix */
-        #mobile-menu { transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1); transform: translateX(100%); }
+        /* Mobile Menu Fix */
+        #mobile-menu { transition: transform 0.4s ease; transform: translateX(100%); }
         #mobile-menu.active { transform: translateX(0); }
+
+        .strength-card:hover {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(15, 23, 42, 0.9) 100%);
+            border-color: rgba(59, 130, 246, 0.5);
+            transform: translateY(-5px);
+        }
     </style>
 </head>
 <body class="text-left">
