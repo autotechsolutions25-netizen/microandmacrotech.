@@ -9,9 +9,14 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
         
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #020617; scroll-behavior: smooth; overflow-x: hidden; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #020617; color: white; overflow-x: hidden; }
         
         .glass { background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
         .hero-gradient { background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #020617 100%); position: relative; }
 
         .ai-glow {
@@ -37,8 +42,8 @@
         .dropdown:hover .dropdown-menu { display: block; }
         .dropdown-content { background: #0f172a; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 10px; box-shadow: 0 15px 30px rgba(0,0,0,0.5); }
 
-        /* Mobile Menu Fix */
-        #mobile-menu { transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1); transform: translateX(100%); }
+/* Mobile Menu Fix */
+        #mobile-menu { transition: transform 0.4s ease; transform: translateX(100%); }
         #mobile-menu.active { transform: translateX(0); }
     </style>
 </head>
