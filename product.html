@@ -10,20 +10,10 @@
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
         body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #020617; color: white; overflow-x: hidden; }
         .glass { background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
-        
-        /* Product Card Hover */
         .product-card:hover { transform: translateY(-10px); border-color: #3b82f6; transition: all 0.4s ease; }
-        
-        /* Modal Style */
         #quote-modal { display: none; }
         #quote-modal.active { display: flex; }
-
-        .gradient-btn {
-            background: linear-gradient(90deg, #1e40af, #3b82f6);
-            transition: all 0.3s ease;
-        }
-
-        /* Mobile Menu Animation Fix */
+        .gradient-btn { background: linear-gradient(90deg, #1e40af, #3b82f6); transition: all 0.3s ease; }
         #mobile-menu { transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1); transform: translateX(100%); }
         #mobile-menu.active { transform: translateX(0); }
     </style>
@@ -44,6 +34,10 @@
 
             <div class="hidden lg:flex space-x-8 items-center font-semibold text-sm">
                 <a href="./index.html" class="hover:text-blue-400 transition">HOME</a>
+                <a href="./about.html" class="hover:text-blue-400 transition">ABOUT US</a>
+                <a href="./careers.html" class="hover:text-blue-400 transition">CAREERS</a>
+                <a href="./product.html" class="text-blue-500 underline decoration-2 underline-offset-8">PRODUCTS</a>
+                <a href="./quote.html" class="bg-blue-600 px-6 py-2.5 rounded-full hover:bg-blue-700 transition">Get Quote</a>
             </div>
 
             <button id="menu-btn" class="lg:hidden text-white focus:outline-none z-[70]">
@@ -54,7 +48,12 @@
 
     <div id="mobile-menu" class="fixed inset-0 bg-[#020617] z-[65] flex flex-col p-10 space-y-6 lg:hidden">
         <div class="pt-10 flex flex-col space-y-6 text-xl font-bold">
-            <a href="./index.html" class="mobile-link">HOME</a>
+            <a href="./index.html" class="mobile-link text-blue-500">HOME</a>
+            <a href="./about.html" class="mobile-link">ABOUT US</a>
+            <a href="./careers.html" class="mobile-link">CAREERS</a>
+            <a href="./product.html" class="mobile-link text-blue-400">PRODUCTS</a>
+            <hr class="border-white/10">
+            <a href="./quote.html" class="bg-blue-600 text-center py-4 rounded-xl text-white font-bold">GET QUOTE</a>
         </div>
     </div>
 
@@ -66,45 +65,39 @@
     </section>
 
     <section class="pb-32 relative z-10">
-        <div class="container mx-auto px-6">
+        <div class="container mx-auto px-6 text-left">
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
                 
                 <div class="glass rounded-[2.5rem] overflow-hidden product-card border border-white/5">
-    <div class="h-64 bg-slate-800 overflow-hidden">
-        <img src="products/PLC.JPG" alt="PLC Controller" class="w-full h-full object-cover opacity-80">
-    </div>
-    <div class="p-8 text-left">
-        <h3 class="text-2xl font-bold mb-3 text-blue-400 text-left">High-End PLC Systems</h3>
-        <p class="text-slate-400 text-sm mb-6 leading-relaxed text-left">
-            Customizable logic controllers for industrial automation.
-        </p>
-        <button onclick="openModal('High-End PLC Systems')" class="gradient-btn w-full py-4 rounded-2xl font-bold uppercase">Get Quote</button>
-    </div>
-</div>
-
-                <div class="glass rounded-[2.5rem] overflow-hidden product-card border border-white/5">
                     <div class="h-64 bg-slate-800 overflow-hidden">
-                        <img src="products/detectors.JPG" alt="Gas Detector" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition">
+                        <img src="products/PLC.JPG" alt="PLC Controller" class="w-full h-full object-cover opacity-80">
                     </div>
                     <div class="p-8">
-                        <h3 class="text-2xl font-bold mb-3 text-blue-400">Industrial Gas Detectors</h3>
-                        <p class="text-slate-400 text-sm mb-6 leading-relaxed">
-                            SIL-2 rated detectors for hazardous fumes and combustible gases with real-time digital display.
-                        </p>
-                        <button onclick="openModal('Industrial Gas Detectors')" class="gradient-btn w-full py-4 rounded-2xl font-bold uppercase tracking-wider text-sm">Get Quote</button>
+                        <h3 class="text-2xl font-bold mb-3 text-blue-400">High-End PLC Systems</h3>
+                        <p class="text-slate-400 text-sm mb-6 leading-relaxed">Customizable logic controllers for industrial automation.</p>
+                        <button onclick="openModal('High-End PLC Systems')" class="gradient-btn w-full py-4 rounded-2xl font-bold uppercase">Get Quote</button>
                     </div>
                 </div>
 
                 <div class="glass rounded-[2.5rem] overflow-hidden product-card border border-white/5">
                     <div class="h-64 bg-slate-800 overflow-hidden">
-                        <img src="/safety.JPG" alt="Safety Curtain" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition">
+                        <img src="products/detectors.JPG" alt="Gas Detector" class="w-full h-full object-cover opacity-80">
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-3 text-blue-400">Industrial Gas Detectors</h3>
+                        <p class="text-slate-400 text-sm mb-6 leading-relaxed">SIL-2 rated detectors for hazardous fumes and combustible gases.</p>
+                        <button onclick="openModal('Industrial Gas Detectors')" class="gradient-btn w-full py-4 rounded-2xl font-bold uppercase">Get Quote</button>
+                    </div>
+                </div>
+
+                <div class="glass rounded-[2.5rem] overflow-hidden product-card border border-white/5">
+                    <div class="h-64 bg-slate-800 overflow-hidden">
+                        <img src="products/safety.JPG" alt="Safety Curtain" class="w-full h-full object-cover opacity-80">
                     </div>
                     <div class="p-8">
                         <h3 class="text-2xl font-bold mb-3 text-blue-400">Safety Light Curtains</h3>
-                        <p class="text-slate-400 text-sm mb-6 leading-relaxed">
-                            Optical guarding systems to ensure personnel safety around high-speed machinery.
-                        </p>
-                        <button onclick="openModal('Safety Light Curtains')" class="gradient-btn w-full py-4 rounded-2xl font-bold uppercase tracking-wider text-sm">Get Quote</button>
+                        <p class="text-slate-400 text-sm mb-6 leading-relaxed">Optical guarding systems to ensure personnel safety around machinery.</p>
+                        <button onclick="openModal('Safety Light Curtains')" class="gradient-btn w-full py-4 rounded-2xl font-bold uppercase">Get Quote</button>
                     </div>
                 </div>
 
@@ -122,9 +115,8 @@
                 <input type="hidden" name="Product_Name" id="product-name-input">
                 <input type="text" name="name" placeholder="Your Name" required class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-blue-500 transition text-white">
                 <input type="email" name="email" placeholder="Email Address" required class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-blue-500 transition text-white">
-                <input type="text" name="company" placeholder="Company Name" class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-blue-500 transition text-white">
-                <textarea name="message" rows="3" placeholder="Requirements..." class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-blue-500 transition text-white"></textarea>
-                <button type="submit" class="w-full gradient-btn py-5 rounded-2xl font-black uppercase tracking-widest text-white shadow-xl shadow-blue-600/30">Submit Enquiry</button>
+                <textarea name="message" rows="3" placeholder="Specific Requirements..." class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-blue-500 transition text-white"></textarea>
+                <button type="submit" class="w-full gradient-btn py-5 rounded-2xl font-black uppercase tracking-widest text-white">Submit Enquiry</button>
             </form>
         </div>
     </div>
@@ -147,22 +139,12 @@
             menuIcon.classList.toggle('fa-times');
         });
 
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.remove('active');
-                menuIcon.classList.add('fa-bars');
-                menuIcon.classList.remove('fa-times');
-            });
-        });
-
         function openModal(productName) {
             document.getElementById('quote-modal').classList.add('active');
             document.getElementById('selected-product').innerText = productName;
             document.getElementById('product-name-input').value = productName;
         }
-        function closeModal() {
-            document.getElementById('quote-modal').classList.remove('active');
-        }
+        function closeModal() { document.getElementById('quote-modal').classList.remove('active'); }
         window.onkeydown = (event) => { if (event.keyCode == 27) closeModal(); }
     </script>
 </body>
