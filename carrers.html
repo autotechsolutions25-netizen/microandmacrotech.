@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Careers | Micro & Macro Technology Pvt. Ltd.</title>
+    <title>Industrial Safety | Micro & Macro Technology Pvt. Ltd.</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
@@ -13,27 +13,36 @@
         
         .glass { background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
         
-        .ai-glow {
-            position: absolute; width: 500px; height: 500px;
-            background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
-            border-radius: 50%; filter: blur(60px); animation: move 20s infinite alternate; z-index: 0;
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
         }
-        @keyframes move { from { transform: translate(-10%, -10%); } to { transform: translate(100%, 50%); } }
-
-        .gradient-text {
-            background: linear-gradient(90deg, #60a5fa, #c084fc, #3b82f6);
-            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-            background-size: 200% auto; animation: shine 3s linear infinite;
+        .logo-track {
+            display: flex;
+            width: calc(250px * 10);
+            animation: scroll 20s linear infinite;
         }
-        @keyframes shine { to { background-position: 200% center; } }
+        .logo-item { width: 250px; flex-shrink: 0; display: flex; items-center: center; justify-content: center; }
 
-        .job-card:hover {
-            border-color: #3b82f6;
-            background: rgba(30, 41, 59, 0.6);
+        /* Mobile Menu Fix */
+        #mobile-menu { transition: transform 0.4s ease; transform: translateX(100%); }
+        #mobile-menu.active { transform: translateX(0); }
+
+        .strength-card:hover {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(15, 23, 42, 0.9) 100%);
+            border-color: rgba(59, 130, 246, 0.5);
             transform: translateY(-5px);
         }
 
-        /* Mobile Menu */
+        /* Card Hover Effects */
+        .safety-card:hover {
+            border-color: #3b82f6;
+            background: rgba(30, 41, 59, 0.5);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        /* Mobile Menu Animation */
         #mobile-menu { transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1); transform: translateX(100%); }
         #mobile-menu.active { transform: translateX(0); }
     </style>
@@ -55,61 +64,78 @@
             </div>
             
             <div class="hidden lg:flex space-x-8 items-center font-semibold text-sm">
-                <a href="index.html" class="hover:text-blue-400 transition text-white">HOME</a>
+                <a href="index.html" class="hover:text-blue-400 transition">HOME</a>
             </div>
- 
+
             <button id="menu-btn" class="lg:hidden text-white focus:outline-none z-[70]">
                 <i class="fas fa-bars text-2xl" id="menu-icon"></i>
             </button>
         </div>
     </nav>
 
-    <div id="mobile-menu" class="fixed inset-0 bg-[#020617] z-[65] flex flex-col p-10 space-y-6 lg:hidden text-left">
+    <div id="mobile-menu" class="fixed inset-0 bg-[#020617] z-[65] flex flex-col p-10 space-y-6 lg:hidden">
         <div class="pt-10 flex flex-col space-y-6 text-xl font-bold">
-            <a href="index.html" class="mobile-link text-white">HOME</a>
+            <a href="index.html" class="mobile-link">HOME</a>
         </div>
     </div>
 
     <section class="pt-44 pb-20 relative z-10 text-left">
-        <div class="container mx-auto px-6">
-            <div class="max-w-4xl">
+        <div class="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+            <div>
                 <div class="inline-block px-4 py-1.5 mb-6 border border-blue-500/30 rounded-full glass text-blue-400 text-xs font-bold tracking-widest uppercase">
-                    Work With Us
+                    Zero-Harm Commitment
                 </div>
                 <h1 class="text-5xl md:text-7xl font-extrabold leading-[1.1] mb-6">
-                    Jumpstart Your <br><span class="gradient-text">Career.</span>
+                    Industrial <span class="gradient-text">Safety</span> & Protection.
                 </h1>
-                <p class="text-slate-400 text-lg md:text-xl max-w-2xl mb-10 leading-relaxed italic">
-                    “Join the <span class="text-white font-bold">#Micro & Macro Squad</span>, the force that builds better places!” 
-                    We are always looking for passionate professionals to redefine industrial excellence.
+                <p class="text-slate-400 text-lg md:text-xl max-w-xl mb-10 leading-relaxed">
+                    Hum advanced technology aur smart sensors ka use karke aapke workplace aur assets ko har tarah ke khatre se mahfooz rakhte hain.
                 </p>
+                <div class="flex flex-wrap gap-4">
+                    <div class="flex items-center space-x-2 text-sm font-bold text-slate-300">
+                        <i class="fas fa-check-circle text-blue-500"></i>
+                        <span>Regulatory Compliance</span>
+                    </div>
+                    <div class="flex items-center space-x-2 text-sm font-bold text-slate-300">
+                        <i class="fas fa-check-circle text-blue-500"></i>
+                        <span>Fail-Safe Solutions</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hidden lg:block relative">
+                <img src="https://images.unsplash.com/photo-1590483734748-3614a55ff358?auto=format&fit=crop&w=800&q=80" class="rounded-[3rem] shadow-2xl border border-white/10 opacity-70" alt="Safety Systems">
             </div>
         </div>
     </section>
 
     <section class="py-20 bg-slate-900/30 text-left">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-black mb-12 uppercase tracking-tighter">Opportunities Across <span class="text-blue-500">Disciplines</span></h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="glass p-8 rounded-3xl job-card transition-all border-white/5">
-                    <i class="fas fa-file-invoice-dollar text-3xl text-blue-500 mb-6"></i>
-                    <h4 class="text-xl font-bold mb-2 uppercase">Accounts & Finance</h4>
-                    <p class="text-slate-400 text-sm">Managing the backbone of our financial precision and industrial growth.</p>
+            <h2 class="text-3xl font-black mb-12 uppercase tracking-tighter">Key Service <span class="text-blue-500">Categories</span></h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="glass p-8 rounded-3xl safety-card transition-all">
+                    <i class="fas fa-bell text-3xl text-blue-500 mb-6"></i>
+                    <h4 class="text-xl font-bold mb-4 uppercase">Fire Detection & Alarm</h4>
+                    <p class="text-slate-400 text-sm">Smoke detectors, heat sensors, aur automated fire panels for rapid response.</p>
                 </div>
-                <div class="glass p-8 rounded-3xl job-card transition-all border-white/5">
-                    <i class="fas fa-code text-3xl text-blue-500 mb-6"></i>
-                    <h4 class="text-xl font-bold mb-2 uppercase">Information Technology</h4>
-                    <p class="text-slate-400 text-sm">Building software solutions and maintaining digital industrial infrastructure.</p>
+                <div class="glass p-8 rounded-3xl safety-card transition-all">
+                    <i class="fas fa-stop-circle text-3xl text-blue-500 mb-6"></i>
+                    <h4 class="text-xl font-bold mb-4 uppercase">ESD Systems</h4>
+                    <p class="text-slate-400 text-sm">Critical situations mein machine ko turant rokne ka Emergency Shutdown system.</p>
                 </div>
-                <div class="glass p-8 rounded-3xl job-card transition-all border-white/5">
-                    <i class="fas fa-tasks text-3xl text-blue-500 mb-6"></i>
-                    <h4 class="text-xl font-bold mb-2 uppercase">Project Mgmt & Execution</h4>
-                    <p class="text-slate-400 text-sm">From design to commissioning—deliver prestigious engineering projects.</p>
+                <div class="glass p-8 rounded-3xl safety-card transition-all">
+                    <i class="fas fa-wind text-3xl text-blue-500 mb-6"></i>
+                    <h4 class="text-xl font-bold mb-4 uppercase">Gas Leakage Detection</h4>
+                    <p class="text-slate-400 text-sm">Industrial gases aur hazardous fumes ko monitor karne ke liye advanced sensors.</p>
                 </div>
-                <div class="glass p-8 rounded-3xl job-card transition-all border-white/5">
-                    <i class="fas fa-chart-pie text-3xl text-blue-500 mb-6"></i>
-                    <h4 class="text-xl font-bold mb-2 uppercase">Sales & Marketing</h4>
-                    <p class="text-slate-400 text-sm">Representing the brand to giants like IOCL, BPCL, and HPCL.</p>
+                <div class="glass p-8 rounded-3xl safety-card transition-all">
+                    <i class="fas fa-user-shield text-3xl text-blue-500 mb-6"></i>
+                    <h4 class="text-xl font-bold mb-4 uppercase">Machine Guarding</h4>
+                    <p class="text-slate-400 text-sm">Safety light curtains jo workers ko moving machine parts se bachate hain.</p>
+                </div>
+                <div class="glass p-8 rounded-3xl safety-card transition-all">
+                    <i class="fas fa-eye text-3xl text-blue-500 mb-6"></i>
+                    <h4 class="text-xl font-bold mb-4 uppercase">Surveillance</h4>
+                    <p class="text-slate-400 text-sm">Authorized entry control aur 24/7 CCTV monitoring with AI integration.</p>
                 </div>
             </div>
         </div>
@@ -117,29 +143,38 @@
 
     <section class="py-24 relative overflow-hidden text-left">
         <div class="container mx-auto px-6">
-            <div class="glass p-10 md:p-16 rounded-[3rem] border-l-8 border-blue-600 shadow-2xl relative">
-                <div class="grid lg:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <h2 class="text-4xl font-black mb-6 uppercase tracking-tighter">Ready to <span class="text-blue-500">Apply?</span></h2>
-                        <p class="text-slate-300 text-lg mb-8 leading-relaxed">
-                            Interested candidates may send an email with <span class="text-white font-bold">Job ID</span>, <span class="text-white font-bold">Experience</span>, and attach your <span class="text-white font-bold">latest resume</span>.
-                        </p>
-                        <div class="space-y-4">
-                            <div class="flex items-center space-x-4">
-                                <div class="w-10 h-10 bg-blue-600/20 rounded-full flex items-center justify-center text-blue-500">
-                                    <i class="fas fa-envelope"></i>
-                                </div>
-                                <span class="text-blue-400 font-bold">microandmacrotechnology@gmail.com</span>
-                            </div>
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="glass p-10 rounded-[3rem] border-l-8 border-blue-600">
+                    <h3 class="text-2xl font-bold mb-6">Fail-Safe Solutions</h3>
+                    <p class="text-slate-400 italic mb-8">
+                        "Hamara focus un systems par hai jo power fail hone par bhi safe mode mein chale jayein, ensuring 100% asset protection."
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="p-4 bg-white/5 rounded-2xl border border-white/5">
+                            <p class="text-2xl font-bold text-blue-500">SIL 3</p>
+                            <p class="text-[10px] uppercase tracking-widest text-slate-500">Rated Systems</p>
+                        </div>
+                        <div class="p-4 bg-white/5 rounded-2xl border border-white/5">
+                            <p class="text-2xl font-bold text-blue-500">Real-Time</p>
+                            <p class="text-[10px] uppercase tracking-widest text-slate-500">Hazard Alerts</p>
                         </div>
                     </div>
-                    
-                    <div class="text-center lg:text-right">
-                        <a href="mailto:microandmacrotechnology@gmail.com?subject=Job Application - [Job ID] - [Your Name]&body=Job ID: %0AExperience: %0A%0APlease find my latest resume attached." 
-                           class="inline-block bg-blue-600 px-12 py-5 rounded-2xl font-black text-xl hover:bg-blue-700 transition-all hover:scale-105 shadow-2xl shadow-blue-600/40 uppercase">
-                            Send Your Resume <i class="fas fa-paper-plane ml-3"></i>
-                        </a>
-                        <p class="mt-4 text-slate-500 text-xs">Direct mail with auto-filled subject line.</p>
+                </div>
+                <div class="space-y-6">
+                    <h2 class="text-4xl font-black uppercase tracking-tighter">Automated <span class="text-blue-500">Safety</span></h2>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-4 p-4 glass rounded-2xl">
+                            <i class="fas fa-lock text-blue-500"></i>
+                            <p class="text-sm">Automated Safety Interlocks for machine startup.</p>
+                        </div>
+                        <div class="flex items-center space-x-4 p-4 glass rounded-2xl">
+                            <i class="fas fa-bolt text-blue-500"></i>
+                            <p class="text-sm">Flame & Spark Detection in flammable environments.</p>
+                        </div>
+                        <div class="flex items-center space-x-4 p-4 glass rounded-2xl">
+                            <i class="fas fa-mobile-alt text-blue-500"></i>
+                            <p class="text-sm">Remote Safety Monitoring via Control Room.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -148,7 +183,7 @@
 
     <footer class="py-12 bg-black border-t border-white/5 text-left">
         <div class="container mx-auto px-6 text-slate-600 text-sm">
-            &copy; 2026 Micro & Macro Technology Pvt. Ltd. | Join the Innovation Squad.
+            &copy; 2026 Micro & Macro Technology Pvt. Ltd. | Protecting Industrial Excellence.
         </div>
     </footer>
 
